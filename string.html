@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods | Assignment</title>
+</head>
+<body>
+
+    <h1>String Methods Assignment</h1>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</body>
+
+<script>
+
+    const sentence = "JavaScript is a versatile programming language.";
+
+    // Write code to find the length of the sentence.
+    document.getElementsByTagName('li')[0].innerHTML = `<strong>The length of the sentence is</strong> : ${sentence.length}`;
+
+    // Write code to convert the sentence to all lowercase letters.
+    document.getElementsByTagName('li')[1].innerHTML = `<strong>The lowercase version of the sentence is</strong> : <em>${sentence.toLowerCase()}`;
+
+    // Write code to extract the word "versatile" from the sentence.
+    document.getElementsByTagName('li')[2].innerHTML = `<strong>Extracting the 4<sup>th</sup> word in the sentence</strong> : <em>${sentence.slice(sentence.lastIndexOf('v'), sentence.lastIndexOf('p'))}`;
+
+    // Write code to replace the word "JavaScript" with "Python" in the sentence.
+    document.getElementsByTagName('li')[3].innerHTML = `<strong>Replacing <em>JavaScript</em> with <em>Python</em> in the sentence</strong> : <em>${sentence.replace('JavaScript', 'Python')}`;
+
+    // Write code to check if the word "language" is in the sentence.
+    // document.getElementsByTagName('li')[4].innerHTML = `<strong>Is the word <em>language</em> in the sentence</strong> : <em>${sentence.startsWith('language', sentence.lastIndexOf('l'))}`;
+
+    document.getElementsByTagName('li')[4].innerHTML = `<strong>Is the word <em>language</em> in the sentence</strong> : <em>${sentence.includes('language')}`;
+
+    // Write code to find the position (index) of the word "programming" in the sentence.
+    document.getElementsByTagName('li')[5].innerHTML = `<strong>The index position of the word <em>programming</em> in the sentence is</strong> : <em>${sentence.indexOf('programming')}`;
+
+    // Write code to get the first 10 characters of the sentence.
+    document.getElementsByTagName('li')[6].innerHTML = `<strong>The first 10 characters in the sentence are</strong> : <em>${sentence.substring(0, 10)}`;
+
+    // Write code to check if the sentence ends with "language."
+    document.getElementsByTagName('li')[7].innerHTML = `<strong>Does the sentence ends with the word <em>language.</em></strong> : <em>${sentence.endsWith('language.')}`;
+
+    // Write code to split the sentence into an array of words.
+    let splitSentence = sentence.split(' ');
+    document.getElementsByTagName('li')[8].innerHTML = `<strong>Splitting the sentence into an array of words</strong> : <em>[${splitSentence.join(' | ')}]`;
+
+    // Write code to remove any whitespace from both ends of the sentence.
+    document.getElementsByTagName('li')[9].innerHTML = `<strong>Removing any whitespace from both ends of sentence</strong> : <em>${sentence.trim()}`;
+
+    // Write code to repeat the sentence twice with a space in between.
+    document.getElementsByTagName('li')[10].innerText = `Repeating the sentence twice with a space in between : 
+    ${sentence}
+        
+    ${sentence}`;
+
+    // Write code to get the last 8 characters of the sentence.
+    document.getElementsByTagName('li')[11].innerHTML = `<strong>The last 8 characters in the sentence are</strong> : <em>${sentence.substring(39, 47)}`;
+
+    // Write code to replace all occurrences of the letter "a" with "@" in the sentence.
+    document.getElementsByTagName('li')[12].innerHTML = `<strong>Replacing all occurrences of the letter <em>a</em> with <em>@</em> in the sentence</strong> : <em>${sentence.replaceAll('a', '@')}`;
+
+    document.getElementsByTagName('li')[13].innerHTML = `<strong>END OF ASSIGNMENT</strong>`
+
+</script>
+
+</html>

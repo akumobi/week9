@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Numbers Methods</title>
+</head>
+<body>
+    <h1>Arrays and Numbers Methods Assignment</h1>
+    <h2></h2>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    const numbers = [12, 5, 8, 130, 44, 2, 17, 9, 33, 105, 68, 72, 19];
+    document.getElementsByTagName('h2')[0].innerHTML = `Sample Array = [${numbers}]`;
+    const solutions = document.querySelectorAll('li');
+
+// Find all numbers in the array that are greater than 20.
+    const q1 = numbers.filter(num => num > 20);
+    solutions[0].innerHTML = `<strong>All numbers in the array that are greater than 20 = </strong> <code> [${q1}]`;
+
+// Create a new array where each number is multiplied by 2.
+    const q2 = numbers.map(num => num * 2);
+    // numbers.map(num => num +=num);
+    solutions[1].innerHTML = `<strong> A new array where each number is multiplied by 2 = </strong> <code> [${q2}]`;
+
+// Find the sum of all the numbers in the array.
+    const q3 = numbers.reduce((a, b) => a + b, 0);
+    solutions[2].innerHTML = `<strong>The sum of all the numbers in the array = </strong> <code> ${q3}`;
+
+// Arrange the numbers in descending order.
+    const q4 = numbers.toSorted((a, b) => b - a);
+    solutions[3].innerHTML = `<strong> A new array where the numbers are in descending order = </strong> <code> [${q4}]`;
+
+// Identify the first number in the array that is greater than 50.
+    const q5 = numbers.find(num => num > 50);
+    solutions[4].innerHTML = `<strong>The first number in the array that is greater than 50 = </strong> <code> ${q5}`;
+
+// Check if the number 33 exists in the array.
+    const q6 = numbers.includes(33);
+    solutions[5].innerHTML = `<strong>Check if the number 33 exists in the array = </strong> <code> ${q6}`;
+
+// Create a sub-array containing the first five elements.
+    const q7 = numbers.slice(0, 5);
+    solutions[6].innerHTML = `<strong> A sub-array containing the first five elements = </strong> <code> [${q7}]`;
+
+// Remove the second and third elements from the array and replace them with 15 and 25.
+    const q8 = numbers.toSpliced(1, 2, 15, 25);
+    solutions[7].innerHTML = `<strong> A new array where the second and third elements from the array and replace them with 15 and 25 = </strong> <code> [${q8}]`;
+
+// Reverse the order of elements in the array.
+    const q9 = numbers.toReversed((a, b) => b - a);
+    solutions[8].innerHTML = `<strong> A new array where the order of elements in the array are reversed = </strong> <code> [${q9}]`;
+
+// Check if every number in the array is less than 200.
+    const q10 = numbers.every(num => num < 200);
+    solutions[9].innerHTML = `<strong>Check if the number 33 exists in the array = </strong> <code> ${q10}`;
+
+// Increase each number by 1 using the increment operator.
+    const q11 = numbers.map(num => ++num);
+    solutions[10].innerHTML = `<strong> A new array where each number is increased by 1 using the increment operator = </strong> <code> [${q11}]`;
+    
+// Cut out the first 6 numbers and return the remainder of each when divided by 7
+    const q12 = numbers.slice(0, 6).map(num => num % 7);
+    solutions[11].innerHTML = `<strong>Cut out the first 6 numbers and return the remainder of each when divided by 7 = </strong> <code> [${q12}]`;
+
+// Cut out the last 5 numbers and add the text “last “ to each.
+    const q13 = numbers.slice(-5).map(num => 'last ' + num);
+    solutions[12].innerHTML = `<strong> Cut out the last 5 numbers and add the text "last " to each = </strong> <code> [${q13}]`;
+
+// Find the first number that is a multiple of 2,3, and 5.
+    const q14 = numbers.find(num => num % 2 == 0 && num % 3 == 0 && num % 5 == 0);
+    solutions[13].innerHTML = `<strong>The first number that is a multiple of 2, 3, and 5 = </strong> <code> [${q14}]`;
+
+// Split the array into two separate arrays: one containing all even numbers and the other containing all odd numbers.
+    const q15 = `Even array [${numbers.filter(num => num % 2 === 0)}]
+    Odd array [${numbers.filter(num => num % 2 !== 0)}]`;
+    solutions[14].innerHTML = `<strong>Split the array into two separate arrays: one containing all even numbers and the other containing all odd numbers = </strong> <code> ${q15}`;
+
+// Sort the array in descending order based on the remainder when each number is divided by 7.
+    const q16 = numbers.map(num => num % 7).toSorted((a, b) => b - a);
+    solutions[15].innerHTML = `<strong>The array in descending order based on the remainder when each number is divided by 7 = </strong> <code> [${q16}]`;
+
+// Find the index of the minimum element without fully sorting the array.
+    const q17 = numbers.indexOf(Math.min(...numbers));
+    solutions[16].innerHTML = `<strong>The index of the minimum element without fully sorting the array = </strong> <code> ${q17}`;
+
+// Using a combination of filter(), map(), and reduce(), calculate the sum of the squares of all numbers greater than 50.
+    const q18 = numbers.filter(num => num > 50).map(num => num *= num).reduce((a, b) => a + b, 0);
+    solutions[17].innerHTML = `<strong>The sum of the squares of all numbers greater than 50 = </strong> <code> ${q18}`;
+
+</script>
+</html>

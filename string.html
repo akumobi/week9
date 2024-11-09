@@ -79,6 +79,33 @@
 
     document.getElementsByTagName('li')[13].innerHTML = `<strong>END OF ASSIGNMENT</strong>`
 
+    const score1 = prompt('Enter English Score')
+    const score2 = prompt('Enter French Score')
+    let exam1 = 'English Exam'
+    let exam2 = 'French Exam'
+
+    // if (score1 > 0 && score1 <= 100 && score2 > 0 && score2 <= 100) {
+    //     if (score1 >= 50 && score2 >= 50) {
+    //         alert('Promoted to Next Class!')
+    //     } 
+    //     else if (score1 >= 50 && score2 < 50) {
+    //         alert(`You have ${exam2} to reseat`)
+    //     }
+    //     else if (score1 < 50 && score2 >= 50) {
+    //         alert(`You have ${exam1} to reseat`)
+    //     }
+    //     else {
+    //         alert('Repeat Class and do better')
+    //     }
+        
+    // } else {
+    //     alert('Enter a valid Score')
+    // }
+
+    score1 >= 50 && score2 >= 50 ? alert('Promoted to Next Class!'):
+    score1 >= 50 || score2 >= 50 ? alert(`You have ${score1 >= 50 ? exam2 : exam1} to reseat`):
+    // score1 < 50 && score2 >= 50 ? alert(`You have ${exam1} to reseat`):
+    alert('Repeat Class and do better')
 </script>
 
 </html>

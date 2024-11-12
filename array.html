@@ -89,8 +89,8 @@
     solutions[12].innerHTML = `<strong> Cut out the last 5 numbers and add the text "last " to each = </strong> <code> [${q13}]`;
 
 // Find the first number that is a multiple of 2,3, and 5.
-    const q14 = numbers.find(num => num % 2 == 0 && num % 3 == 0 && num % 5 == 0);
-    solutions[13].innerHTML = `<strong>The first number that is a multiple of 2, 3, and 5 = </strong> <code> [${q14}]`;
+    const q14 = numbers.find(num => num % 2 == 0 && num % 3 == 0 && num % 5 == 0) == undefined ? "Does not exists": numbers.find(num => num % 2 == 0 && num % 3 == 0 && num % 5 == 0);
+    solutions[13].innerHTML = `<strong>The first number that is a multiple of 2, 3, and 5 = </strong> <code> ${q14}`;
 
 // Split the array into two separate arrays: one containing all even numbers and the other containing all odd numbers.
     const q15 = `Even array [${numbers.filter(num => num % 2 === 0)}]

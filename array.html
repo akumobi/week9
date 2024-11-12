@@ -53,10 +53,11 @@
 
 // Identify the first number in the array that is greater than 50.
     const q5 = numbers.find(num => num > 50);
+    // const q5 = numbers.filter(num => num > 50)[0];
     solutions[4].innerHTML = `<strong>The first number in the array that is greater than 50 = </strong> <code> ${q5}`;
 
 // Check if the number 33 exists in the array.
-    const q6 = numbers.includes(33);
+    const q6 = numbers.includes(33) ? 'Yes it exists' : 'No, it does not exist';
     solutions[5].innerHTML = `<strong>Check if the number 33 exists in the array = </strong> <code> ${q6}`;
 
 // Create a sub-array containing the first five elements.
@@ -72,8 +73,8 @@
     solutions[8].innerHTML = `<strong> A new array where the order of elements in the array are reversed = </strong> <code> [${q9}]`;
 
 // Check if every number in the array is less than 200.
-    const q10 = numbers.every(num => num < 200);
-    solutions[9].innerHTML = `<strong>Check if the number 33 exists in the array = </strong> <code> ${q10}`;
+    const q10 = numbers.every(num => num < 200) ? 'Yes every number is less than 200' : 'No, some numbers are greater than 200';
+    solutions[9].innerHTML = `<strong>Check if every number in the array is less than 200 = </strong> <code> ${q10}`;
 
 // Increase each number by 1 using the increment operator.
     const q11 = numbers.map(num => ++num);
